@@ -4,3 +4,6 @@ section {
 .hidden {
   display: none;
 }
+.movie-list{
+  display: flex;
+}
