@@ -1,4 +1,6 @@
-import { saveToken } from './auth.js'
+import { saveToken } from './auth.js';
+import moviesPage from './moviePage.js'
+import navigation from './navigation.js';
 
 let baseUrl = 'http://localhost:3030';
 let registerSection = document.querySelector('.register');
@@ -22,8 +24,10 @@ registerForm.addEventListener('submit', (e) => {
     })
         .then(res => res.json())
         .then(responseData => {
-            console.log(responseData);
             saveToken(responseData.accessToken);
+            hidePage();
+            moviesPage.showPage();
+            navigation.updateNavigation();
         });
 })
 
