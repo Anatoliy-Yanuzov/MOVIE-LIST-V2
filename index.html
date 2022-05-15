@@ -22,26 +22,29 @@
   <body>
     <section class="header">
       <ul class="nav">
-        <li class="nav-item">
+        <li class="nav-item auth">
           <a
             class="nav-link active"
-            data-link="home"
             aria-current="page"
+            data-link="home"
             href="#"
             >Home</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-link="list" href="#">List</a>
+          <a class="nav-link" data-link="movies" href="#">Movies</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-link="my-movies" href="#">My Movies</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item guest">
           <a class="nav-link" data-link="login" href="#">Login</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item guest">
           <a class="nav-link" data-link="register" href="#">Register</a>
+        </li>
+        <li class="nav-item private">
+          <a class="nav-link" data-link="logout" href="#">Logout</a>
         </li>
       </ul>
     </section>
@@ -75,7 +78,7 @@
         </div>
         <div class="col-auto">
           <button type="submit" class="btn btn-primary mb-3">
-            Confirm identity
+            Register
           </button>
         </div>
       </form>
@@ -109,9 +112,27 @@
       </div>
       <div class="col-auto">
         <button type="submit" class="btn btn-primary mb-3">
-          Confirm identity
+          Login
         </button>
       </div>
+    </section>
+
+    <section class="movies hidden">
+      <h2>All Movies</h2>
+
+      <li class="card hidden" id="movie-card-template" style="width: 18rem">
+        <img src="" class="card-img-top" alt="" />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Show Details</a>
+        </div>
+      </li>
+
+      <ul class="movie-list"></ul>
     </section>
   </body>
 </html>
